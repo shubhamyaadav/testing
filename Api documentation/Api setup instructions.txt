@@ -1,0 +1,25 @@
+ Documentation
+
+Setup Instructions:
+Unzip the zip file
+Configure the .env file for database connection.
+Run php spark serve to start the server.
+API Endpoints:
+GET /colleges: Fetch colleges with optional filters stream and courses.
+POST /colleges: Add a new college with fields:
+name (string, required)
+location (string, required)
+stream (string, required)
+courses (JSON array, required)
+
+
+POST http://localhost:8080/colleges
+Content-Type: application/json
+
+{
+    "name": "ABC College",
+    "location": "New York",
+    "stream": "Science",
+    "courses": "[\"Math\", \"Physics\"]"
+}
+
