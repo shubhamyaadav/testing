@@ -21,7 +21,7 @@ class CollegesController extends ResourceController
     }
 
     // GET /colleges
-    public function index()
+    public  function index()
     {
         $filters = $this->request->getGet();
 
@@ -45,7 +45,7 @@ class CollegesController extends ResourceController
 
         $this->collegeModel->insert($data);
 
-        return $this->respondCreated(['message' => 'College added successfully']);
+        return $this-> respondCreated(['message' => 'College added successfully']);
     }
 
 }
